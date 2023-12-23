@@ -8,6 +8,7 @@ import { OrganizationComponent } from './organization/organization.component';
 import { RequestsComponent } from './requests/requests.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { BodyComponent } from './body/body.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     OrganizationComponent,
     RequestsComponent,
     DocumentsComponent,
-    SidenavComponent
+    SidenavComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,
