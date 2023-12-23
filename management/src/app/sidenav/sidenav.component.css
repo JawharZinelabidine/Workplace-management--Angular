@@ -10,16 +10,14 @@
     box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
 }
 
-.logo-container {
+.sidenav .logo-container {
     display: flex;
     align-items: center;
-    padding: 0.938 0.938 0 0.938;
+    padding: 0.938rem 0.938rem 0 0.938rem;
     width: 100%;
 }
 
-.logo {
-    background: #ffff;
-    text-align: center;
+.sidenav .logo-container .logo {
     width: 3rem;
     min-width: 3rem;
     border-radius: 0.313rem;
@@ -29,7 +27,6 @@
     cursor: pointer;
 }
 
-
 .logo-text {
     margin-left: 1.5rem;
     font-size: 24px;
@@ -37,9 +34,8 @@
     color: #ffff;
 }
 
-
-
 .btn-close {
+    color: #ffff;
     margin-left: auto;
     cursor: pointer;
     width: 2rem;
@@ -47,21 +43,21 @@
     border-radius: 50%;
     background-color: transparent;
     border: none;
+    font-size: 24px;
 
 }
 
-.fa-times {
+.sidenav .logo-container .logo .logo-text .btn-close .fa-times {
     color: #ffff;
     font-size: 24px;
 }
 
 .sidenav-collapsed {
     width: 16.5625rem;
-    /* width: 5rem; */
-
 
 
 }
+
 
 .sidenav-nav {
     list-style: none;
@@ -74,32 +70,50 @@
     cursor: pointer;
 }
 
-.sidenav-nav-item {
+.sidenav-nav .sidenav-nav-item {
     width: 100%;
     margin-bottom: 0.625rem;
+
 }
 
-.sidenav-nav-link {
+#sidenav-nav-link {
     display: flex;
-    align-items: center;
+    justify-self: center;
     height: 3rem;
-    color: #f3f3f3;
     text-decoration: none;
     border-radius: 0.625rem;
-    transform: all 0.3s ease;
-    padding: 0.313rem;
-
+    transition: all 0.3s ease;
+    padding-top: 0.913rem;
+    padding-left: 1.12rem;
 }
 
-.sidenav-nav-link-icon {
+#sidenav-nav-link-top {
+    display: flex;
+    justify-self: center;
+    height: 3rem;
+    text-decoration: none;
+    border-radius: 0.625rem;
+    transition: all 0.3s ease;
+    padding-top: 0.913rem;
+    padding-left: 0.950rem;
+}
+
+.navlink {
+    color: white;
+}
+
+.sidenav-nav .sidenav-nav-item #sidenav-nav-link #sidenav-nav-link-top .sidenav-nav-link-icon {
     font-size: 22px;
     width: 2rem;
     min-width: 2rem;
     margin: 0 0.5rem;
     text-align: center;
+
 }
 
-.sidenav-link-text {
+
+
+.sidenav-nav .sidenav-nav-item .navlink .sidenav-link-text {
     margin-left: 1.5rem;
 }
 
@@ -112,9 +126,22 @@
 
 }
 
-.sidenav-nav-link:hover {
+#sidenav-nav-link:hover {
     background-color: #ffff;
     color: #000;
     border-radius: 0.625rem;
 
+}
+
+#sidenav-nav-link-top:hover {
+    background-color: #ffff;
+    color: #000;
+    border-radius: 0.625rem;
+
+}
+
+
+.active {
+    background-color: #fff;
+    color: #000;
 }
