@@ -13,7 +13,6 @@ export class BodyComponent {
 
   getBodyClass(): string {
     let styleClass = ''
-    console.log(this.collapsed)
     if (this.collapsed && this.screenWidth > 768) {
       styleClass = 'body-trimmed';
     }
