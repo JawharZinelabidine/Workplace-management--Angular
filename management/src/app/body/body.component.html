@@ -1,3 +1,9 @@
 <div class="body" [ngClass]="getBodyClass()">
-    <router-outlet></router-outlet>
+    <div class="page-outline">
+        <div class="profile-info">
+            <img src='../../assets/user.png' class="profile-image" alt="" />
+            <span class="profile-name">Username</span>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
 </div>
