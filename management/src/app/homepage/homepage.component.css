@@ -79,6 +79,15 @@
     border-radius: 10px;
     margin-bottom: 2%;
     max-height: 100%;
+    cursor: pointer;
+
+
+}
+
+
+.page-overview:hover {
+
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.596);
 
 
 }
