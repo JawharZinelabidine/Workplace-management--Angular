@@ -1,21 +1,81 @@
-<h1 class="title">Requests</h1>
-<table>
-    <thead>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-            <th>Column 4</th>
-            <th>Column 5</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>one</td>
-            <td>two</td>
-            <td>three</td>
-            <td>four</td>
-            <td>five</td>
-        </tr>
-    </tbody>
-</table>
+<div class="header">
+    <div class="header-content">
+        <h1 class="header-title">
+            Employee requests
+        </h1>
+        <div class="header-end">
+            <div class="requests">
+                <span class="request-count">0</span>
+                <span class="request-text">Requests</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="delete-modal" *ngIf="deleteModalOpen">
+        <div class="overlay-delete" (click)="toggleDeleteModal()"></div>
+        <div class="modal-content-delete">
+            <h1 class="message">Are you sure you want to decline this request?</h1>
+            <button class="close-modal-button-yes ">
+                Yes
+            </button>
+            <button class="close-modal-button-no" (click)="toggleDeleteModal()">
+                No
+            </button>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <h1 class="content-title">Requests</h1>
+    <div class="employee-table">
+        <table>
+            <thead class="columns">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Request</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Department</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody class="rows">
+                <tr>
+                    <td>#1</td>
+                    <td>Alaa Ben Nasr</td>
+                    <td><i class="document fas fa-file"></i></td>
+                    <td>alaa&#64;gmail.com</td>
+                    <td>Employee</td>
+                    <td>IT</td>
+                    <td>
+                        <button class="approve fal fa-check">
+
+                        </button>
+                        <button class="decline" (click)="toggleDeleteModal()">
+                            X
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>#1</td>
+                    <td>Alaa Ben Nasr</td>
+                    <td><i class="document fas fa-file"></i></td>
+                    <td>alaa&#64;gmail.com</td>
+                    <td>Employee</td>
+                    <td>IT</td>
+                    <td>
+                        <button class="approve fal fa-check">
+
+                        </button>
+                        <button class="decline" (click)="toggleDeleteModal()">
+                            X
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

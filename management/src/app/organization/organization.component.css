@@ -1,5 +1,249 @@
-.title {
+.header {
+    flex: 1 1 100%;
+    padding: 1rem;
+    background-color: #ffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 2%;
+}
 
-    margin-left: 45%;
-    margin-bottom: 10%;
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-title {
+    font-weight: 500;
+    align-self: center;
+    font-size: 3vh;
+}
+
+
+.header-end {
+    display: flex;
+    gap: 20%;
+    align-self: center;
+
+}
+
+.add {
+    text-align: center;
+}
+
+.add-button {
+    padding: 10px 15px;
+    background-color: #99edc3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 2vh;
+}
+
+.add-button:hover {
+    cursor: pointer;
+}
+
+.add-text {
+    display: inline-block;
+    margin-top: 1vh;
+    color: #555;
+}
+
+.employees {
+    text-align: center;
+}
+
+.employee-count {
+    font-size: 4vh;
+}
+
+.employee-text {
+    display: inline-block;
+    margin-top: 0.8vh;
+    color: #555;
+}
+
+.content {
+    flex: 1 1 100%;
+    padding: 2rem;
+    background-color: #ffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 2%;
+
+}
+
+
+.content-title {
+    font-weight: 500;
+    align-self: center;
+    font-size: 3vh;
+
+}
+
+.employee-table {
+    height: 45vh;
+    max-height: 44vh;
+    overflow: auto;
+    margin-top: 1vh;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.employee-table table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.employee-table th {
+    background-color: #008080;
+    height: 7vh;
+    color: #fff;
+}
+
+.employee-table th,
+.employee-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+    border: none;
+
+}
+
+.employee-table thead {
+    position: sticky;
+    top: 0;
+    background-color: #f5f5f5;
+    z-index: 1;
+}
+
+
+
+
+.edit {
+    font-size: 22px;
+    width: 2.5rem;
+    min-width: 2rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+    text-align: center;
+    background-color: #f4d35e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete {
+    font-size: 22px;
+    width: 2.5rem;
+    min-width: 2rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+    text-align: center;
+    background-color: #7c0a02;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+
+
+.modal-content-delete {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    padding: 4px 28px;
+    border-radius: 3px;
+    max-width: 80vh;
+    min-width: 80vh;
+    max-height: 500vh;
+    height: 25vh;
+    width: 70vh;
+    background-color: #ffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    z-index: 99;
+
+}
+
+.overlay-delete {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(26, 25, 25, 0.342);
+    z-index: 2
+}
+
+.message {
+
+    padding-top: 5vh;
+    width: 70vh;
+    color: black;
+    font-size: 30px;
+
+}
+
+.close-modal-button-yes {
+    margin-top: 7vh;
+    margin-right: 2vh;
+    font-size: 0.875rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    border-color: transparent;
+    color: green;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.199);
+    font-weight: 700;
+    cursor: pointer;
+
+}
+
+.close-modal-button-no {
+    margin-top: 7vh;
+    font-size: 0.875rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    text-align: center;
+    background-color: #7c0a02;
+    border-radius: 5px;
+    border-color: transparent;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.199);
+    cursor: pointer;
+
+}
+
+
+.close-modal-button-yes:hover {
+
+    background-color: #99edc3;
+    color: #fff;
+}
+
+.close-modal-button-no:hover {
+
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.418);
+
 }
