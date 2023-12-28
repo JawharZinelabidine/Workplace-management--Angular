@@ -97,11 +97,24 @@
     padding-left: 0.950rem;
 }
 
+#sidenav-nav-link-log {
+    display: flex;
+    justify-self: center;
+    height: 3rem;
+    text-decoration: none;
+    border-radius: 0.625rem;
+    transition: all 0.3s ease;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+
+
 .navlink {
     color: white;
 }
 
-.sidenav-nav .sidenav-nav-item #sidenav-nav-link #sidenav-nav-link-top .sidenav-nav-link-icon {
+.sidenav-nav .sidenav-nav-item #sidenav-nav-link #sidenav-nav-link-top #sidenav-nav-link-log .sidenav-nav-link-icon {
     font-size: 22px;
     width: 2rem;
     min-width: 2rem;
@@ -114,6 +127,10 @@
 
 .sidenav-nav .sidenav-nav-item .navlink .sidenav-link-text {
     margin-left: 1.5rem;
+}
+
+.sidenav-nav .sidenav-nav-item .navlink .sidenav-link-text-log {
+    margin-left: 3.5rem;
 }
 
 
@@ -139,8 +156,21 @@
 
 }
 
+#sidenav-nav-link-log:hover {
+    background-color: #ffff;
+    color: #000;
+    border-radius: 0.625rem;
+
+}
+
 
 .active {
     background-color: #fff;
     color: #000;
+}
+
+
+#logout {
+    margin-top: 50vh;
+
 }

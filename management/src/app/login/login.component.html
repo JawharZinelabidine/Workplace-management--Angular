@@ -1,0 +1,30 @@
+<span class="title">
+    <p class="powered">powered by </p>
+    <p class="brand"> HR-OPs</p>
+
+
+</span>
+<div class="login-container">
+    <div class="login-box">
+        <form name="form-login" [formGroup]="myForm" (submit)="submitForm()">
+
+            <h1 class="login">Log in to your organization</h1>
+            <div class="input">
+                <label for="email">Email:</label>
+
+                <input type="email" class="email" formControlName="email" placeholder="Enter your email" />
+
+            </div>
+            <div class="input">
+                <label for="password">Password:</label>
+
+                <input type="password" class="password" formControlName="password" placeholder="Enter your password" />
+
+            </div>
+            <div class="input">
+                <input type="submit" value="Login" />
+            </div>
+        </form>
+    </div>
+
+</div>

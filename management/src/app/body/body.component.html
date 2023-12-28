@@ -1,6 +1,6 @@
 <div class="body" [ngClass]="getBodyClass()">
     <div class="page-outline">
-        <div class="profile-info">
+        <div class="profile-info" *ngIf="currentPath.length > 0">
             <img src='../../assets/user.png' class="profile-image" alt="" />
             <span class="profile-name">Username</span>
         </div>
