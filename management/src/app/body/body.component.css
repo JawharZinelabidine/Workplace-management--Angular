@@ -5,19 +5,20 @@
     position: relative;
     top: 0;
     transition: all .5s ease;
-    background: #f4f7fa;
     padding: 3rem;
+    background: #f4f7fa;
+
 }
 
 .login-body {
-    width: 208.9vh;
+    width: 100%;
     height: 100vh;
     z-index: 0;
     position: relative;
     top: 0;
     transition: all .5s ease;
     padding: 3rem;
-    background-image: url('../../assets/OAK42N0.jpg');
+    background: #f4f7fa;
     background-size: cover;
 }
 
@@ -25,6 +26,7 @@
 .body-trimmed {
     width: calc(100% - 16.5625rem);
     margin-left: 16.5625rem;
+
 }
 
 
