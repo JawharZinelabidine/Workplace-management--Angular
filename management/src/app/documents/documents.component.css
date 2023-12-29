@@ -99,3 +99,122 @@
     text-align: center;
 
 }
+
+
+
+.modal-content-add {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    padding: 4px 28px;
+    border-radius: 3px;
+    max-width: 80vh;
+    min-width: 80vh;
+    max-height: 40rem;
+    height: 40rem;
+    width: 70vh;
+    background-color: #ffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    z-index: 99;
+    overflow: auto;
+
+
+}
+
+.overlay-add {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(26, 25, 25, 0.342);
+    z-index: 2
+}
+
+.message {
+
+    padding-top: 5vh;
+    width: 70vh;
+    color: black;
+    font-size: 30px;
+    margin-bottom: 1rem;
+
+}
+
+.close-modal-button-yes {
+    margin-top: 7vh;
+    margin-right: 2vh;
+    font-size: 0.875rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    border-color: transparent;
+    color: green;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.199);
+    font-weight: 700;
+    cursor: pointer;
+
+}
+
+.close-modal-button-no {
+    margin-top: 7vh;
+    font-size: 0.875rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    text-align: center;
+    background-color: #7c0a02;
+    border-radius: 5px;
+    border-color: transparent;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.199);
+    cursor: pointer;
+
+}
+
+
+.close-modal-button-yes:hover {
+
+    background-color: #99edc3;
+    color: #fff;
+}
+
+.close-modal-button-no:hover {
+
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.418);
+
+}
+
+
+.fields {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+
+input[type="submit"] {
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 3% 6%;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    margin-left: 12rem;
+    cursor: pointer;
+
+}
