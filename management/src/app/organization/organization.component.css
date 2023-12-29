@@ -47,7 +47,7 @@
 
 .add-text {
     display: inline-block;
-    margin-top: 1vh;
+    margin-top: 0.8vh;
     color: #555;
 }
 
@@ -138,6 +138,8 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+
 
 .delete {
     font-size: 22px;

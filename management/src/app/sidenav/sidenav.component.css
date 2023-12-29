@@ -5,7 +5,8 @@
     z-index: 1;
     width: 5rem;
     top: 0;
-    height: 100vh;
+    height: 100%;
+
     box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
 }
 
@@ -171,14 +172,20 @@
 
 
 #logout {
-    margin-top: 50vh;
-
+    margin-top: auto;
+    margin-bottom: 2rem;
 }
 
 .footer {
-    margin-top: 5vh;
     color: #fff;
-    font-weight: 200;
+    font-weight: 100;
     cursor: auto;
+    font-size: 12px;
 
+}
+
+
+.sidenav-footer {
+    margin-top: auto;
+    /* Pushes the footer content to the bottom */
 }
