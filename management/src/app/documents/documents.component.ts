@@ -9,7 +9,7 @@ import { Field } from './fields';
 })
 export class DocumentsComponent {
 
-  addModalOpen: boolean = true;
+  addModalOpen: boolean = false;
   name = ''
   type = ''
   fields: Field[] = []
