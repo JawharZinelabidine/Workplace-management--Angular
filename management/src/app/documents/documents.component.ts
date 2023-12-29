@@ -9,7 +9,9 @@ import { Field } from './fields';
 })
 export class DocumentsComponent {
 
-  addModalOpen: boolean = false;
+  addModalOpen: boolean = true;
+  addModalDocName: boolean = false
+  docName = ''
   name = ''
   type = ''
   fields: Field[] = []
@@ -25,17 +27,44 @@ export class DocumentsComponent {
   }
 
   addField(): void {
-    const newField: Field = { name: this.name, type: this.type };
-    this.documentsService.addField(newField);
-    console.log(newField)
 
-    this.name = ''; // Reset input values
-    this.type = ''; // Reset input values
+    if (this.name.length && this.type.length) {
+      const newField: Field = { name: this.name, type: this.type };
+      this.documentsService.addField(newField);
+      this.name = '';
+      this.type = '';
+    }
+
   }
 
   removeField(index: number): void {
     this.documentsService.removeField(index)
 
+  }
+
+  clearFields(): void {
+    this.documentsService.clearField()
+  }
+
+  next(): void {
+
+    if (this.fields.length) {
+      this.addModalDocName = !this.addModalDocName
+    }
+  }
+
+  handleSubmit(): void {
+
+    this.documentsService.createDocument({ docName: this.docName, fields: this.fields })
+      .subscribe(
+        (response) => {
+          console.log('Document added successfully', response);
+          this.toggleAddModal()
+        },
+        (error) => {
+          console.error("Couldn't add document", error)
+        }
+      )
   }
 
 

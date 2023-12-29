@@ -16,31 +16,53 @@
 <div class="add-modal" *ngIf="addModalOpen">
     <div class="overlay-add" (click)="toggleAddModal()"></div>
     <div class="modal-content-add">
-        <h1 class="message">Create new document</h1>
-        <form class="form-group">
-            <div class="fields">
-                <label htmlFor="category" class="method">Field:</label>
-                <select id="type" name="type" class="form-control" [(ngModel)]="type">
+        <div class="top">
+
+            <h1 class="message" *ngIf="!addModalDocName">Create a new document</h1>
+            <h1 class="message" *ngIf="addModalDocName">Name your new document</h1>
+            <button class="close" (click)="toggleAddModal()">
+                <i class="fal fa-times close-icon"></i>
+            </button>
+        </div>
+        <form class="form-group" (ngSubmit)="handleSubmit()">
+            <div class="docName" *ngIf="addModalDocName">
+                <input type="text" name="document-name" class="document-name" placeholder="Write document name..."
+                    [(ngModel)]="docName" />
+                <input type="submit" value="Submit" />
+
+            </div>
+            <div class="fields" *ngIf="!addModalDocName">
+                <label htmlFor="field-name" class="method">Field Name:</label>
+                <input type="text" name='field-name"' class="name-field" placeholder="Write field name..."
+                    [(ngModel)]="name" />
+                <label htmlFor="type" class="method">Field Type:</label>
+                <select id="type" name="type" class="type-picker" [(ngModel)]="type">
                     <option disabled selected value=''> Select field type </option>
                     <option value="Text">Text</option>
                     <option value="Number">Number</option>
                 </select>
-                <label htmlFor="field-name" class="method">Field name:</label>
-                <input type="text" name='name' [(ngModel)]="name" />
+
                 <button class="add-button" (click)="addField()"><i class="fal fa-plus"></i></button>
 
             </div>
-            <ul class="field-list list-none text-center mt-6">
-                <li *ngFor="let field of fields; let i = index"
-                    class="field-item flex justify-between items-center border border-gray-300 p-4 mb-4 rounded-lg">
-                    <span class="field-text text-xl">field: {{ field.name }} type: {{field.type}}</span>
-                    <button (click)="removeField(i)"
-                        class="remove-btn bg-red-500 text-white p-2 rounded-lg cursor-pointer text-lg hover:bg-red-600">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                    </button>
-                </li>
-            </ul>
-            <input type="submit" />
+            <div class="field-container" *ngIf="!addModalDocName">
+                <ul class="field-list ">
+                    <li *ngFor="let field of fields; let i = index" class="field-item ">
+                        <span class="field-text"><span style="font-weight: 500;">Field name:</span> {{
+                            field.name }} |<span style="font-weight: 500;"> Field type:</span>
+                            {{field.type}}</span>
+                        <button (click)="removeField(i)" class="remove-btn">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="buttons" *ngIf="!addModalDocName">
+                <button class="clear" (click)="clearFields()">Clear</button>
+                <button class="next" (click)="next()">Next</button>
+
+            </div>
+
         </form>
     </div>
 </div>

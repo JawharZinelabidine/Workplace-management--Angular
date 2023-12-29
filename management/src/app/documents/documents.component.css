@@ -42,6 +42,7 @@
     border: none;
     border-radius: 5px;
     font-size: 2vh;
+
 }
 
 .add-button:hover {
@@ -120,7 +121,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
     z-index: 99;
-    overflow: auto;
+
 
 
 }
@@ -147,61 +148,24 @@
 
 }
 
-.close-modal-button-yes {
-    margin-top: 7vh;
-    margin-right: 2vh;
-    font-size: 0.875rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 5px;
-    border-color: transparent;
-    color: green;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.199);
-    font-weight: 700;
-    cursor: pointer;
-
-}
-
-.close-modal-button-no {
-    margin-top: 7vh;
-    font-size: 0.875rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
-    text-align: center;
-    background-color: #7c0a02;
-    border-radius: 5px;
-    border-color: transparent;
-    color: #fff;
-    font-weight: 700;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.199);
-    cursor: pointer;
-
-}
-
-
-.close-modal-button-yes:hover {
-
-    background-color: #99edc3;
-    color: #fff;
-}
-
-.close-modal-button-no:hover {
-
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.418);
-
-}
 
 
 .fields {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    position: absolute;
+    bottom: 1rem;
+    width: 94%;
+    text-align: center;
+
 }
 
 
@@ -214,7 +178,149 @@ input[type="submit"] {
     font-size: 16px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 8px;
-    margin-left: 12rem;
     cursor: pointer;
+    font-weight: 600;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+}
 
+.next {
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 3% 6%;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+
+}
+
+.clear {
+    background-color: #f4d35e;
+    color: white;
+    border: none;
+    padding: 3% 6%;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.method {
+    align-self: center;
+}
+
+
+.field-container {
+    overflow: auto;
+    max-height: 22rem;
+
+}
+
+.field-text {
+    margin-right: 1rem;
+}
+
+
+.field-list {
+    list-style: none;
+    margin-top: 1.5rem;
+    text-align: center;
+    padding-left: 0;
+}
+
+.field-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.field-item:hover {
+    background-color: #f0f0f0;
+}
+
+.remove-btn {
+    background-color: #7c0a02;
+    color: #fff;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.name-field {
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 0.5rem;
+
+}
+
+.type-picker {
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 0.5rem;
+
+}
+
+
+.docName {
+
+    position: relative;
+    width: 100%;
+    height: 40vh;
+
+}
+
+.document-name {
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 60%;
+    height: 4rem;
+    border-radius: 0.5rem;
+
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        height: 40vh;
+    }
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.close {
+    background-color: transparent;
+    margin-left: auto;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 15%;
+    border: none;
+    font-size: 24px;
+    margin-top: 1rem;
 }
